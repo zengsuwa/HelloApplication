@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/noslide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不滑动的主题" />
+
+    <Button
+        android:id="@+id/isslide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="滑动的主题" />
+    <Button
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="沉浸式状态栏" />
+    <Button
+        android:id="@+id/mvp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="mvp模式" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".noslide.YouFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<com.zsw.zeng.helloapplication.MyImageView-->
+    <!--android:id="@+id/image"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:src="@mipmap/add_pic_bg"/>-->
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/image"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_width="120dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:src="@mipmap/add_pic_bg"-->
+    <!--app:civ_border_width="2dp"-->
+    <!--app:civ_border_color="#FF000000"/>-->
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="left|center_vertical"
+        fresco:actualImageScaleType="focusCrop"
+        android:layout_marginLeft="40dp"
+        android:background="@mipmap/add_pic_bg"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundingBorderColor="@color/grey"
+        fresco:roundedCornerRadius="5dp" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        fresco:actualImageScaleType="focusCrop"
+        android:background="@mipmap/add_pic_bg"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="40dp"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundingBorderColor="@color/grey"
+        fresco:roundedCornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加照片" />
+
+</FrameLayout>
