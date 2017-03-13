@@ -10,6 +10,7 @@ import com.zsw.zeng.helloapplication.mvp.MvpActivity;
 import com.zsw.zeng.helloapplication.noslide.NoSlideActivity;
 import com.zsw.zeng.helloapplication.slide.SlideActivity;
 import com.zsw.zeng.helloapplication.status.StatusActivity;
+import com.zsw.zeng.helloapplication.ui.ProgressActivity;
 
 /**
  * @author zeng
@@ -22,6 +23,7 @@ public class MainActivity extends Activity {
     private Button isslide;
     private Button status;
     private Button mvp;
+    private Button progressDialog;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends Activity {
         isslide = (Button) findViewById(R.id.isslide);
         status = (Button) findViewById(R.id.status);
         mvp = (Button) findViewById(R.id.mvp);
+        progressDialog = (Button) findViewById(R.id.progressDialog);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +64,14 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 //跳转到系统实现沉浸式状态栏
                 intent = new Intent(MainActivity.this, MvpActivity.class);
+                startActivity(intent);
+            }
+        });
+        progressDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到系统实现沉浸式状态栏
+                intent = new Intent(MainActivity.this, ProgressActivity.class);
                 startActivity(intent);
             }
         });
