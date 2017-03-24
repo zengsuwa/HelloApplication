@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.zsw.zeng.helloapplication.fixtest.HotFixActivity;
 import com.zsw.zeng.helloapplication.mvp.MvpActivity;
 import com.zsw.zeng.helloapplication.noslide.NoSlideActivity;
 import com.zsw.zeng.helloapplication.slide.SlideActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends Activity {
     private Button status;
     private Button mvp;
     private Button progressDialog;
+    private Button hotfix;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class MainActivity extends Activity {
         status = (Button) findViewById(R.id.status);
         mvp = (Button) findViewById(R.id.mvp);
         progressDialog = (Button) findViewById(R.id.progressDialog);
+        hotfix = (Button) findViewById(R.id.hotfix);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,8 +73,16 @@ public class MainActivity extends Activity {
         progressDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到系统实现沉浸式状态栏
+                //显示加载圈
                 intent = new Intent(MainActivity.this, ProgressActivity.class);
+                startActivity(intent);
+            }
+        });
+        hotfix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到系统实现沉浸式状态栏
+                intent = new Intent(MainActivity.this, HotFixActivity.class);
                 startActivity(intent);
             }
         });

@@ -4,13 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.zsw.zeng.helloapplication.AppApplication;
-import com.zsw.zeng.helloapplication.R;
+import com.zsw.zeng.helloapplication.fixtest.AppApplication;
 import com.zsw.zeng.helloapplication.utils.NetWorkUtil;
 import com.zsw.zeng.helloapplication.utils.PreferenceHelper;
 import com.zsw.zeng.helloapplication.utils.ToastUtils;

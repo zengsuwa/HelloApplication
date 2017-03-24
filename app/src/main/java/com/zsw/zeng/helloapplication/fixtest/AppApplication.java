@@ -1,19 +1,13 @@
-package com.zsw.zeng.helloapplication;
+package com.zsw.zeng.helloapplication.fixtest;
 
 import android.app.Application;
 import android.content.Context;
 
 
-import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.nostra13.universalimageloader.utils.StorageUtils;
 import com.zsw.zeng.helloapplication.constant.Constant;
+import com.zsw.zeng.helloapplication.fixutils.FixDexUtils;
 import com.zsw.zeng.helloapplication.utils.Config;
 import com.zsw.zeng.helloapplication.utils.PreferenceHelper;
-
-import java.io.File;
 
 
 /**
@@ -50,5 +44,8 @@ public class AppApplication extends Application {
         return preferenceHelper;
     }
 
-
+    @Override protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        FixDexUtils.loadFixedDex(this);
+    }
 }

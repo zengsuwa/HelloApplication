@@ -30,4 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="访问接口时显示加载框" />
+    <Button
+        android:id="@+id/hotfix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热修复" />
 </LinearLayout>
